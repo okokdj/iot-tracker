@@ -5,7 +5,7 @@ export interface LocationData {
     accuracy: number;
     source: string;
     state: string;
-    geozones: any[];
+    geozones: unknown[];
     address: string;
     scannedAps: ScannedAp[];
 }
