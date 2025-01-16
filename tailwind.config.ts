@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'kodchasan': ['Kodchasan', 'sans-serif'],
+      },      
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -14,4 +18,4 @@ export default {
     },
   },
   plugins: [],
-};
+} satisfies Config;
