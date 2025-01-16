@@ -2,10 +2,15 @@ import { initializeApp, cert, getApps } from 'firebase-admin/app';
 import { getDatabase } from 'firebase-admin/database';
 
 if (!getApps().length) {
+
+  console.log('checking firebase app')
+  
   try {
     if (!process.env.FIREBASE_DATABASE_URL) {
       throw new Error('FIREBASE_DATABASE_URL is not defined');
     }
+
+    console.log('initializeApp now')
 
     initializeApp({
       credential: cert({
